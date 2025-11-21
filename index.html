@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="es">
 
 <head>
@@ -9,13 +9,27 @@
 </head>
 
 <body>
-    <div id="juego-contenedor">
+
+    <!-- Solicitud de Nickname -->
+    <div id="nickname-container">
+        <div id="nickname-box">
+            <p>Ingresa tu Nickname:</p>
+            <input type="text" id="nickname-input" placeholder="Tu Nick...">
+            <button id="nickname-btn">Aceptar</button>
+        </div>
+    </div>
+
+    <div id="juego-contenedor" class="dia">
         <div id="pixel-bot"></div>
         <div id="suelo"></div>
+
         <div id="mensaje-juego">
             Presiona ESPACIO para empezar
         </div>
+
         <div id="puntuacion">Puntuación: 0</div>
+        <div id="nivel-display">Nivel: 1</div>
+        <div id="nick-display">Nick: ---</div>
     </div>
 
     <script src="js/main.js"></script>
