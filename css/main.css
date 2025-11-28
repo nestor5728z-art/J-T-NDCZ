@@ -1,138 +1,234 @@
 body {
     font-family: 'Press Start 2P', cursive, monospace;
+    /* fuente estilo retro*/
     display: flex;
+    /* Activa el sistema flexbox */
     justify-content: center;
+    /* Centra contenido horizontal */
     align-items: center;
+    /* Centra contenido vertical */
     min-height: 100vh;
+    /* Ocupa toda la pantalla */
     background-color: #333;
+    /* Fondo gris oscuro */
     margin: 0;
+    /* Quita márgenes del navegador */
     overflow: hidden;
+    /* Oculta barras de desplazamiento */
 }
 
 
 /* NICKNAME */
 #nickname-container {
     position: fixed;
+    /* Fijo en toda la pantalla */
     top: 0;
+    /* Alineado arriba */
     left: 0;
+    /* Alineado a la izquierda */
     width: 100%;
+    /* Ancho completo */
     height: 100%;
+    /* Alto completo */
     background: rgba(186, 241, 246, 0.85);
+    /* Fondo azul claro translúcido */
     display: flex;
+    /* Para centrar su contenido */
     justify-content: center;
+    /* Centra horizontal */
     align-items: center;
+    /* Centra vertical */
     z-index: 300;
+    /* Se muestra por encima del juego */
 }
 
 #nickname-box {
     background: #222;
+    /* Caja oscura */
     padding: 20px;
+    /* Espacio interior */
     border-radius: 10px;
+    /* Bordes redondeados */
     text-align: center;
+    /* Texto centrado */
     color: #fff;
+    /* Texto blanco */
 }
+
 
 #nickname-box input {
     padding: 5px;
+    /* Espacio interno del input */
     width: 200px;
+    /* Ancho del input */
     margin-bottom: 10px;
+    /* Espacio debajo */
 }
 
 
-/* CONTENEDOR DEL JUEGO */
+
 #juego-contenedor {
     width: 900px;
+    /* Ancho del área del juego */
     height: 200px;
+    /* Alto del área del juego */
     border: 5px solid #fff;
+    /* Borde blanco alrededor */
     position: relative;
+    /* Referencia para elementos absolute */
     overflow: hidden;
+    /* Nada sale del borde */
 }
 
+
 .dia {
-    background-color: #e7f96f;
+    background-color: #6f88f9;
+    /* Color de día */
 }
 
 .noche {
     background-color: #ca8127;
+    /* Color de noche */
 }
+
 
 
 /* SUELO */
 #suelo {
     width: 100%;
+    /* Ocupa todo el ancho */
     height: 30px;
+    /* Altura del suelo */
     background: url('../img/suelo.png') repeat-x;
+    /* Imagen repetida horizontal */
     background-size: auto 30px;
+    /* Ajusta altura a 30px */
     position: absolute;
+    /* Posición dentro del contenedor */
     bottom: 0;
+    /* Pegado al fondo */
     animation: moverSuelo 5s linear infinite;
+    /* Animación continua del suelo */
 }
 
+
 @keyframes moverSuelo {
-    from { background-position-x: 0; }
-    to { background-position-x: -900px; }
+    from {
+        background-position-x: 0;
+    }
+
+    /* Comienza sin movimiento */
+    to {
+        background-position-x: -900px;
+    }
+
+    /* Mueve la imagen a la izquierda */
 }
+
 
 
 /* PERSONAJE */
 #pixel-bot {
     width: 50px;
+    /* Tamaño del personaje */
     height: 50px;
+    /* Tamaño del personaje */
     background: url('../img/pixelbot.png') no-repeat center center;
+    /* Imagen centrada */
     background-size: cover;
+    /* Ajusta imagen al cuadro */
     position: absolute;
+    /* Posición libre dentro del contenedor */
     bottom: 30px;
+    /* Sobre el suelo */
     left: 50px;
+    /* Separado del borde izquierdo */
     z-index: 10;
+    /* Delante del suelo y obstáculos */
 }
+
 
 
 /* OBSTÁCULO */
 .obstaculo {
     width: 30px;
+    /* Tamaño del obstáculo */
     height: 50px;
+    /* Altura del obstáculo */
     background: url('../img/obstaculo.png') no-repeat center center;
+    /* Imagen centrada */
     background-size: cover;
+    /* Ajusta imagen */
     position: absolute;
+    /* Movimiento libre */
     bottom: 30px;
+    /* A nivel del suelo */
     left: 900px;
+    /* Empieza fuera del borde derecho */
 }
+
 
 
 /* MENSAJE */
 #mensaje-juego {
     position: absolute;
+    /* Se coloca en el centro */
     top: 50%;
+    /* Mitad vertical */
     left: 50%;
+    /* Mitad horizontal */
     transform: translate(-50%, -50%);
+    /* Centrado perfecto */
     color: #fff;
+    /* Texto blanco */
     font-size: 1.2em;
-    background-color: rgba(0,0,0,0.7);
+    /* Texto más grande */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo negro translúcido */
     padding: 10px 20px;
+    /* Espacio alrededor */
     border-radius: 5px;
+    /* Bordes suavizados */
     z-index: 100;
+    /* Encima del juego */
     text-align: center;
+    /* Texto centrado */
 }
+
 
 
 /* PUNTUACIÓN & NIVEL & NICK */
 #puntuacion {
     position: absolute;
+    /* Fijo dentro del juego */
     top: 10px;
+    /* Arriba */
     right: 10px;
+    /* A la derecha */
     color: #fff;
+    /* Texto blanco */
 }
+
 
 #nivel-display {
     position: absolute;
+    /* Fijo dentro del juego */
     top: 40px;
+    /* Más abajo */
     right: 10px;
+    /* A la derecha */
     color: #fff;
+    /* Texto blanco */
 }
+
 
 #nick-display {
     position: absolute;
+    /* Fijo dentro del juego */
     top: 70px;
+    /* Debajo de nivel */
     right: 10px;
+    /* A la derecha */
     color: #fff;
+    /* Texto blanco */
 }

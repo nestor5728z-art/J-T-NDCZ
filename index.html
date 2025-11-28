@@ -1,38 +1,44 @@
 
-<html lang="es">
+<html lang="es"> <!-- Indica que el documento está en español -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel-Bot Run</title>
-    <link rel="stylesheet" href="css/main.css">
+
+<head> <!-- Contenedor de configuración y metadatos -->
+
+    <meta charset="UTF-8"> <!-- Permite usar acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste para móviles -->
+    <title>Pixel-Bot Run</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Conecta el archivo CSS -->
 </head>
 
-<body>
 
-    <!-- Solicitud de Nickname -->
-    <div id="nickname-container">
-        <div id="nickname-box">
-            <p>Ingresa tu Nickname:</p>
-            <input type="text" id="nickname-input" placeholder="Tu Nick...">
-            <button id="nickname-btn">Aceptar</button>
+<body> <!-- Contenido visible de la página -->
+
+
+    
+    <!-- Solicitud de Nickname --> 
+    <div id="nickname-container">                        <!-- Pantalla que cubre todo para pedir el nick -->
+        <div id="nickname-box">                        <!-- Caja donde se escribe el nick -->
+            <p>Ingresa tu Nickname:</p>                <!-- Texto visible -->
+            <input type="text" id="nickname-input" placeholder="Tu Nick...">                 <!-- Caja de texto -->
+            <button id="nickname-btn">Aceptar</button>                  <!-- Botón para continuar -->
         </div>
     </div>
 
-    <div id="juego-contenedor" class="dia">
-        <div id="pixel-bot"></div>
-        <div id="suelo"></div>
+
+    <div id="juego-contenedor" class="dia">    <!--Área del juego con modo "día"-->
+        <div id="pixel-bot"></div>             <!-- Personaje principal-->
+        <div id="suelo"></div>                 <!--Suelo animado del juego-->
 
         <div id="mensaje-juego">
-            Presiona ESPACIO para empezar
+            Presiona ESPACIO para empezar      <!-- Texto que aparece antes de jugar-->
         </div>
 
-        <div id="puntuacion">Puntuación: 0</div>
-        <div id="nivel-display">Nivel: 1</div>
-        <div id="nick-display">Nick: ---</div>
-    </div>
+        <div id="puntuacion">Puntuación: 0</div> <!-- Muestra la puntuación-->
+        <div id="nivel-display">Nivel: 1</div>     <!--Muestra el nivel-->
+        <div id="nick-display">Nick: ---</div>   <!--Muestra el nickname ingresado-->
+    </div>  <!--Cierra el contenedor del juego-->
 
-    <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>  <!--Conecta el archivo de lógica del juego-->
+</body>   <!--Fin del documento visible-->
 
-</html>
+</html> <!--Fin del documento-->
